@@ -62,7 +62,7 @@ Here is an implementation as a `sh` script in a git alias `git move`
       else \
         printf \"\n🚚 Shipping hotfix version [$version] from $branch branch\n  - commit: $commit_to_ship\n  - most recent release: $last_release\n\n\"; \
         changelog $last_release $commit_to_ship; \
-        printf \"\n⚠️  Note: This is a hotfix release, since you are shipping from the $branch branch and not from master.\n\n\"; \
+        printf \"\nℹ️ Note: This is a hotfix release, since you are shipping from the $branch branch and not from master.\n\n\"; \
         read -p \"Ship hotfix?\n  ✓ 'yes' to continue\n  ✗ enter / anything else to cancel\n\n> \"; \
       fi; \
       if [ \"$REPLY\" != \"yes\" ]; then \
